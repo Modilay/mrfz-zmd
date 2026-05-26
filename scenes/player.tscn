@@ -2,6 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://b0lcsgrhp3jcn" path="res://resources/texture/W.png" id="1_3vyb7"]
 [ext_resource type="Script" uid="uid://bwcio3vtrshpv" path="res://scripts/Player.cs" id="1_qhqgy"]
+[ext_resource type="PackedScene" uid="uid://do05nidmo00wk" path="res://scenes/bullet.tscn" id="2_dqkch"]
 [ext_resource type="Texture2D" uid="uid://bni5spclbdsme" path="res://resources/texture/浮游炮.png" id="2_g2els"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_g2els"]
@@ -380,6 +381,7 @@ radius = 7.0
 
 [node name="Player" type="CharacterBody2D" unique_id=1136441848]
 script = ExtResource("1_qhqgy")
+BulletPrefab = ExtResource("2_dqkch")
 
 [node name="BodySprite" type="AnimatedSprite2D" parent="." unique_id=1949384221]
 sprite_frames = SubResource("SpriteFrames_3vyb7")
@@ -394,3 +396,5 @@ frame_progress = 0.14612168
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1442639317]
 shape = SubResource("CircleShape2D_u8vuu")
+
+[node name="ShootTimer" type="Timer" parent="." unique_id=1401359616]
